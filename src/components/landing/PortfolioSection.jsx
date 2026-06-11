@@ -13,35 +13,35 @@ export default function PortfolioSection() {
       badgeClass: 'bg-[#E0E7FF] text-[#4F46E5]',
       title: 'Customer Churn Predictor',
       description: 'Build an end-to-end ML pipeline to identify customers likely to leave. Covers data cleaning, feature engineering, model training, hyperparameter tuning, and deployment through a REST API.',
-      tags: ['Python', 'Scikit-learn', 'Flask', 'Pandas'],
+      tags: ['Python', 'Scikit-learn', 'Flask', 'Pandas', 'XGBoost'],
       companies: ['Airtel', 'Jio Platforms', 'Vodafone Idea'],
       isCapstone: false
     },
     {
       badge: 'Project 02',
       badgeClass: 'bg-[#EEDCF8] text-[#8B5CF6]',
-      title: 'Demand Forecasting System',
-      description: 'Forecast future sales and demand using historical business data. Learn time-series forecasting with ARIMA, Prophet, and LSTM models while building business dashboards.',
-      tags: ['TensorFlow', 'Prophet', 'LSTM','Streamlet', 'SQL'],
-      companies: ['Walmart', 'Amazon', 'Flipkart'],
+      title: 'AI Resume Screening System',
+      description: 'Build an intelligent resume screening application that automatically analyzes, classifies, and ranks candidate resumes against job requirements using NLP and Machine Learning techniques.',
+      tags: ['Python', 'TensorFlow', 'BERT', 'NLP','FastAPI'],
+      companies: ['LinkedIn', 'Naukri', 'Indeed'],
       isCapstone: false
     },
     {
       badge: 'Project 03',
       badgeClass: 'bg-[#F5EBDD] text-[#F59E0B]',
-      title: 'NLP Sentiment Classifier',
-      description: 'Analyze customer reviews and feedback using Natural Language Processing. Build a production-ready sentiment classification system exposed through a REST API.',
-      tags: ['Hugging Face', 'BERT', 'Python', 'FastAPI'],
-      companies: ['Amazon', 'Zomato', 'Swiggy'],
+      title: 'GenAI Chatbot with RAG',
+      description: 'Build a production-ready AI chatbot capable of answering questions using enterprise knowledge bases through Retrieval-Augmented Generation (RAG) and Large Language Models.',
+      tags: ['Python', 'LLMs', 'LangChain', 'ChromaDB','RAG'],
+      companies: ['OpenAI', 'Microsoft', 'Salesforce'],
       isCapstone: false
     },   
     {
       badge: 'Project 04',
       badgeClass: 'bg-[#D9EEF8] text-[#0369A1]',
-      title: 'Computer Vision Defect Detector',
-      description: 'Detect manufacturing defects from product images using Deep Learning and Computer Vision techniques. Deploy the solution through an interactive web application.',
-      tags: ['CNN', 'OpenCV', 'PyTorch', 'Docker'],
-      companies: ['Tesla', ' Samsung', 'Bosch'],
+      title: 'Multi-Agent Business Analyst',
+      description: 'Build a team of AI agents that collaborate to analyze business data, generate insights, identify trends, and recommend actions for decision-making.',
+      tags: ['LangGraph', 'CrewAI', 'MCP', 'SQL', 'Agentic AI'],
+      companies: ['Amazon', ' Uber', 'Airbnb'],
       isCapstone: false
     },
     {
@@ -49,7 +49,7 @@ export default function PortfolioSection() {
       badgeClass: 'bg-[#DCEFE6] text-[#16A34A]',
       title: 'End-to-End MLOps Pipeline',
       description: 'Automate model training, versioning, deployment, monitoring, and retraining. Learn how production AI systems are managed at scale.',
-      tags: ['MLflow', 'Airflow', 'AWS', 'GitHub Actions'],
+      tags: ['MLflow', 'Airflow', 'AWS', 'Docker', 'GitHub Actions'],
       companies: ['Netflix', 'Uber', 'Airbnb'],
       isCapstone: false
     },
@@ -58,8 +58,8 @@ export default function PortfolioSection() {
       badgeClass: 'bg-[#DDE1F8] text-[#4F46E5]',
       title: 'Your Domain Capstone Project',
       description: 'Build a complete AI application from problem definition to deployment in your chosen domain such as Healthcare, Finance, E-Commerce, or Education.',
-      tags: [],
-      companies: [],
+      tags: ['Python', 'ML', 'GenAI', 'Cloud' , 'Deployment'],
+      companies: ['Healthcare', 'Finance', 'E-Commerce', 'Education', 'Manufacturing'],
       isCapstone: true,
       domainTag: 'Your choice of domain',
       footerText: 'This is the project that closes your interviews.'

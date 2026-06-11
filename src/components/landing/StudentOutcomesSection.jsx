@@ -81,10 +81,10 @@ export default function StudentOutcomesSection() {
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="bg-white rounded-xl p-4 text-center">
                 <div className="text-[#7C3AED] text-4xl md:text-5xl font-bold mb-2">
-                  6
+                 Production-Ready
                 </div>
                 <p className="text-[#6B7280] text-sm leading-relaxed">
-                  Production-Ready Projects.Built and deployed during the program.
+                   Projects.Built and deployed during the program.
 
                 </p>
               </div>

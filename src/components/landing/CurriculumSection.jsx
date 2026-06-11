@@ -10,81 +10,63 @@ export default function CurriculumSection() {
       weeks: 'PHASE 1',
       title: 'Programming & Data Foundations',
       items: [ 
-        'SQL & Advanced SQL Queries',
-        'Database Design & Data Modeling',
-        'Python Programming',
-        'Object-Oriented Programming (OOP)',
-        'Data Structures & Algorithms Basics',
-        'NumPy & Pandas',
-        'Data Manipulation & Processing'
+        'SQL, Advanced SQL, Database Design & Data Modeling',
+        'Python Programming, OOP & Data Structures',
+        'NumPy, Pandas & Data Manipulation',
+        'Data Processing, Analysis & Problem Solving'
+        
       ]
     },
     {
       weeks: 'PHASE 2',
       title: 'Mathematics & Data Analysis',
       items: [
-        'Statistics & Probability',
-        'Linear Algebra Fundamentals',
-        'Data Visualization',
-        'Exploratory Data Analysis (EDA)',
-        'Feature Analysis',
-        'Data Cleaning & Preprocessing',
-        'Business Insights Generation'
+        'Statistics, Probability & Linear Algebra Foundations',
+        'Exploratory Data Analysis (EDA) & Visualization',
+        'Data Cleaning, Transformation & Feature Analysis',
+        'Business Insights, Trends & Data Storytelling'       
       ]
     },
     {
       weeks: 'PHASE 3',
       title: 'Machine Learning Engineering',
       items: [
-        'Supervised Learning',
-        'Unsupervised Learning',
-        'Feature Engineering',
-        'Model Evaluation & Optimization',
-        'Ensemble Methods',
-        'Recommendation Systems',
-        'Real-World ML Problem Solving'
+        'Supervised & Unsupervised Learning Algorithms',
+        'Feature Engineering & Model Optimization',
+        'Ensemble Methods & Recommendation Systems',
+        'Real-World Machine Learning Problem Solving'       
+        
       ]
     },
     {
       weeks: 'PHASE 4',
       title: 'Deep Learning & Computer Vision',
       items: [
-        'Neural Networks',
-        'TensorFlow & PyTorch',
-        'CNN Architectures',
-        'Transfer Learning',
-        'Image Classification',
-        'Object Detection',
-        'Computer Vision Applications'
+        'Neural Networks, Deep Learning Fundamentals',
+        'TensorFlow, Keras & PyTorch Frameworks',
+        'CNNs, Transfer Learning & Model Optimization',
+        'Image Classification, Object Detection & Computer Vision'       
       ]
     },
     {
       weeks: 'PHASE 5',
       title: 'NLP, Generative AI & Agentic AI',
       items: [
-        'Natural Language Processing (NLP)',
-        'Transformers & BERT',
-        'Prompt Engineering',
-        'Retrieval-Augmented Generation (RAG)',
-        'Large Language Models (LLMs)',
-        'Fine-Tuning Techniques',
-        'Model Context Protocol (MCP)',
-        'AI Agents & Multi-Agent Systems',
-        'Tool Calling & Function Calling',
-        'Agent Workflows & Orchestration'
+        'NLP, Transformers, BERT & Prompt Engineering',
+        'LLMs, RAG Pipelines & Fine-Tuning Techniques',
+        'MCP, Tool Calling & Agent Workflows',
+        'Agentic AI, Multi-Agent Systems & Automation'
+        
       ]
     },
     {
       weeks: 'PHASE 6',
       title: 'MLOps & Industry Capstone',
       items: [
-        'Model Deployment',
-        'Docker & Cloud Platforms',
-        'CI/CD for Machine Learning',
-        'MLflow & Experiment Tracking',
-        'Model Monitoring',
-        'Production AI Systems',
-        'End-to-End AI Project Development'
+        'Model Deployment with Flask, FastAPI & Streamlit',
+        'Docker, MLflow & Production AI Workflows',
+        'AWS, Cloud Deployment & CI/CD Pipelines',
+        'End-to-End AI Project Development & Monitoring'
       ]
     }
   ];
