@@ -80,8 +80,8 @@ export default function StudentOutcomesSection() {
             {/* Stats Cards */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-[#7C3AED] text-4xl md:text-5xl font-bold mb-2">
-                 Production-Ready
+                <div className="text-[#7C3AED] text-2xl md:text-3xl font-bold mb-2">
+                 Production Ready
                 </div>
                 <p className="text-[#6B7280] text-sm leading-relaxed">
                    Projects.Built and deployed during the program.
