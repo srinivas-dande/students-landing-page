@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model StudentGoogleLead {
+  lead_id           Int      @id @default(autoincrement())
+  full_name         String
+  email_id          String
+  whatsapp_number   String
+  year_of_passout   String
+  qualification     String
+  branch_or_stream  String
+  city              String
+
+  utm_source        String?
+  utm_medium        String?
+  utm_campaign      String?
+  utm_term          String?
+  utm_content       String?
+  gclid             String?
+
+  landing_page      String?
+  page_url          String?
+  form_type         String?
+
+  created_at        DateTime @default(now())
+  lead_stage        String   @default("New Lead")
+
+  @@map("student_google_leads")
+}
+
+model ProfessionalsGoogleLead {
+  lead_id            Int      @id @default(autoincrement())
+  full_name          String
+  email_id           String
+  whatsapp_number    String
+  year_of_experience String
+  current_role       String
+
+  utm_source         String?
+  utm_medium         String?
+  utm_campaign       String?
+  utm_term           String?
+  utm_content        String?
+  gclid              String?
+
+  landing_page       String?
+  page_url           String?
+  form_type          String?
+
+  created_at         DateTime @default(now())
+  lead_stage         String   @default("New Lead")
+
+  @@map("professionals_google_leads")
+}
+
+

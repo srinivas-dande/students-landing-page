@@ -12,52 +12,52 @@ export default function PortfolioSection() {
       badge: 'Project 01',
       badgeClass: 'bg-[#E0E7FF] text-[#4F46E5]',
       title: 'Customer Churn Predictor',
-      description: 'End-to-end ML pipeline, full data cleaning, feature engineering, model training, hyperparameter tuning, and a live REST API endpoint. The type of project that earns 20-minute technical discussions.',
+      description: 'Build an end-to-end ML pipeline to identify customers likely to leave. Covers data cleaning, feature engineering, model training, hyperparameter tuning, and deployment through a REST API.',
       tags: ['Python', 'Scikit-learn', 'Flask', 'Pandas'],
-      companies: ['Mu Sigma', 'Airtel AI', 'Jio Platforms'],
+      companies: ['Airtel', 'Jio Platforms', 'Vodafone Idea'],
       isCapstone: false
     },
     {
       badge: 'Project 02',
       badgeClass: 'bg-[#EEDCF8] text-[#8B5CF6]',
       title: 'Demand Forecasting System',
-      description: 'Time-series forecasting for retail inventory LSTM + ARIMA with comparison, deployed to a live Stream, lit dashboard with confidence intervals. Demonstrates both classical and deep learning approaches.',
-      tags: ['TensorFlow', 'LSTM', 'Streamlet', 'SQL'],
-      companies: ['Walmart Labs India', 'Flipkart AI'],
+      description: 'Forecast future sales and demand using historical business data. Learn time-series forecasting with ARIMA, Prophet, and LSTM models while building business dashboards.',
+      tags: ['TensorFlow', 'Prophet', 'LSTM','Streamlet', 'SQL'],
+      companies: ['Walmart', 'Amazon', 'Flipkart'],
       isCapstone: false
     },
     {
       badge: 'Project 03',
       badgeClass: 'bg-[#F5EBDD] text-[#F59E0B]',
       title: 'NLP Sentiment Classifier',
-      description: 'Fine-tuned BERT model for multi-class product review sentiment, achieving 94.3% validation accuracy. Deployed as an authenticated REST API with rate-limiting production-grade, not a notebook.',
-      tags: ['Hugging Face', 'BERT', 'PyTorch', 'FastAPI'],
-      companies: ['Meesho', 'Swiggy AI', 'Amazon'],
+      description: 'Analyze customer reviews and feedback using Natural Language Processing. Build a production-ready sentiment classification system exposed through a REST API.',
+      tags: ['Hugging Face', 'BERT', 'Python', 'FastAPI'],
+      companies: ['Amazon', 'Zomato', 'Swiggy'],
       isCapstone: false
-    },
+    },   
     {
       badge: 'Project 04',
       badgeClass: 'bg-[#D9EEF8] text-[#0369A1]',
       title: 'Computer Vision Defect Detector',
-      description: 'Industrial image classification for manufacturing quality control. Trained on real datasets, deployed as a web app with real-time camera inference. Especially powerful for non-CS engineers with domain context.',
+      description: 'Detect manufacturing defects from product images using Deep Learning and Computer Vision techniques. Deploy the solution through an interactive web application.',
       tags: ['CNN', 'OpenCV', 'PyTorch', 'Docker'],
-      companies: ['Lam Research', 'Bosch AI', 'Honeywell'],
+      companies: ['Tesla', ' Samsung', 'Bosch'],
       isCapstone: false
     },
     {
       badge: 'Project 05',
       badgeClass: 'bg-[#DCEFE6] text-[#16A34A]',
       title: 'End-to-End MLOps Pipeline',
-      description: 'Production ML platform with automated retraining triggers, model versioning, drift detection, and a monitoring dashboard. The project that signals readiness for senior AI roles not just analyst positions.',
+      description: 'Automate model training, versioning, deployment, monitoring, and retraining. Learn how production AI systems are managed at scale.',
       tags: ['MLflow', 'Airflow', 'AWS', 'GitHub Actions'],
-      companies: ['Walmart Labs India', 'Flipkart AI'],
+      companies: ['Netflix', 'Uber', 'Airbnb'],
       isCapstone: false
     },
     {
       badge: 'Capstone',
       badgeClass: 'bg-[#DDE1F8] text-[#4F46E5]',
       title: 'Your Domain Capstone Project',
-      description: 'Choose your industry finance, healthcare, retail, manufacturing, or e-commerce. Build a complete AI application aligned to where you want to work, with 1:1 mentor guidance from start to deployment.',
+      description: 'Build a complete AI application from problem definition to deployment in your chosen domain such as Healthcare, Finance, E-Commerce, or Education.',
       tags: [],
       companies: [],
       isCapstone: true,
@@ -76,11 +76,10 @@ export default function PortfolioSection() {
             By the end of this course, your{' '}
             <span className="text-[#CF2030]">GitHub</span>
             <br />
-            will have these
+            Portfolio Will Include:
           </h2>
           <p className="text-[#6B7280] text-base max-w-2xl mx-auto">
-            Not toy datasets from 2017. Not assignment homework. Real, deployable AI systems built
-            on the same stacks that hiring companies actually use.
+            Build six real-world AI projects across Machine Learning, NLP, Computer Vision, and MLOps — designed to showcase the skills hiring companies look for in AI/ML Engineers.
           </p>
         </div>
 
@@ -259,7 +258,7 @@ export default function PortfolioSection() {
         <div className="bg-[#F3F4F6] rounded-xl p-6 text-center">
           <p className="text-[#374151] text-sm md:text-base">
             <span className="font-bold">&quot;These aren&apos;t toy projects.&quot;</span>
-            {' '}Every project is built to demonstrate production thinking, not just that you know the algorithm, but that you know how to ship it, document it, and defend it in a technical interview. That&apos;s the difference between a certificate and an offer.
+            {' '}Every project is built to showcase real-world AI engineering skills — from data preparation and model development to deployment and production readiness. That's the difference between completing a course and becoming an AI/ML Engineer.
           </p>
         </div>
       </div>

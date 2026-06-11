@@ -7,63 +7,84 @@ export default function CurriculumSection() {
 
   const modules = [
     {
-      weeks: 'WEEKS 1–3',
-      title: 'Python & ML Foundations',
-      items: [
-        'Python for data science, NumPy, Pandas, Matplotlib from scratch',
-        'Statistics and probability: distributions, hypothesis testing, correlation',
-        'Supervised learning: regression, decision trees, model evaluation',
-        'Scikit-learn complete walkthrough with real datasets from Day 1'
+      weeks: 'PHASE 1',
+      title: 'Programming & Data Foundations',
+      items: [ 
+        'SQL & Advanced SQL Queries',
+        'Database Design & Data Modeling',
+        'Python Programming',
+        'Object-Oriented Programming (OOP)',
+        'Data Structures & Algorithms Basics',
+        'NumPy & Pandas',
+        'Data Manipulation & Processing'
       ]
     },
     {
-      weeks: 'WEEKS 4–6',
-      title: 'Data Engineering & EDA',
+      weeks: 'PHASE 2',
+      title: 'Mathematics & Data Analysis',
       items: [
-        'SQL for machine learning, joins, aggregations, window functions',
-        'Advanced feature engineering and automated selection',
-        'Handling missing data, outliers, and class imbalance',
-        'Project delivery: Customer Churn Predictor (end-to-end)'
+        'Statistics & Probability',
+        'Linear Algebra Fundamentals',
+        'Data Visualization',
+        'Exploratory Data Analysis (EDA)',
+        'Feature Analysis',
+        'Data Cleaning & Preprocessing',
+        'Business Insights Generation'
       ]
     },
     {
-      weeks: 'WEEKS 7–10',
-      title: 'Deep Learning & Neural Networks',
+      weeks: 'PHASE 3',
+      title: 'Machine Learning Engineering',
       items: [
-        'Neural network architecture, perceptron to deep multi-layer networks',
-        'TensorFlow and PyTorch, training loops, optimisers, loss functions',
-        'CNNs for vision, RNNs and LSTMs for sequential data',
-        'Transfer learning with pre-trained models on new domains'
+        'Supervised Learning',
+        'Unsupervised Learning',
+        'Feature Engineering',
+        'Model Evaluation & Optimization',
+        'Ensemble Methods',
+        'Recommendation Systems',
+        'Real-World ML Problem Solving'
       ]
     },
     {
-      weeks: 'WEEKS 11–14',
-      title: 'NLP & Large Language Models',
+      weeks: 'PHASE 4',
+      title: 'Deep Learning & Computer Vision',
       items: [
-        'Text preprocessing, tokenisation, word embeddings',
-        'Transformer architecture, attention, BERT, GPT fine-tuning',
-        'Building RAG pipelines with LangChain for production LLM apps',
-        'Project: NLP Sentiment Classifier deployed as authenticated API'
+        'Neural Networks',
+        'TensorFlow & PyTorch',
+        'CNN Architectures',
+        'Transfer Learning',
+        'Image Classification',
+        'Object Detection',
+        'Computer Vision Applications'
       ]
     },
     {
-      weeks: 'WEEKS 15–18',
-      title: 'MLOps & Cloud Deployment',
+      weeks: 'PHASE 5',
+      title: 'NLP, Generative AI & Agentic AI',
       items: [
-        'Model serving with Flask, FastAPI, Streamlit, production patterns',
-        'Docker for portable, reproducible ML applications',
-        'AWS SageMaker and Google Cloud Vertex AI deployment',
-        'CI/CD pipelines for automated ML deployment via GitHub Actions'
+        'Natural Language Processing (NLP)',
+        'Transformers & BERT',
+        'Prompt Engineering',
+        'Retrieval-Augmented Generation (RAG)',
+        'Large Language Models (LLMs)',
+        'Fine-Tuning Techniques',
+        'Model Context Protocol (MCP)',
+        'AI Agents & Multi-Agent Systems',
+        'Tool Calling & Function Calling',
+        'Agent Workflows & Orchestration'
       ]
     },
     {
-      weeks: 'WEEKS 19–24',
-      title: 'Capstone + Interview Prep',
+      weeks: 'PHASE 6',
+      title: 'MLOps & Industry Capstone',
       items: [
-        '1:1 mentored domain capstone, full build with code review',
-        'ML system design interview preparation and walkthroughs',
-        '5 structured mock interviews with detailed written feedback',
-        'Resume, LinkedIn, and GitHub portfolio review sessions'
+        'Model Deployment',
+        'Docker & Cloud Platforms',
+        'CI/CD for Machine Learning',
+        'MLflow & Experiment Tracking',
+        'Model Monitoring',
+        'Production AI Systems',
+        'End-to-End AI Project Development'
       ]
     }
   ];
@@ -130,14 +151,14 @@ export default function CurriculumSection() {
             Curriculum
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">
-            A complete <span className="text-[#DC2626]">artificial intelligence</span>
+            Comprehensive <span className="text-[#DC2626]">AI & Machine Learning</span> Curriculum
             <br />
             specialist course, 24 weeks
           </h2>
           <p className="text-[#667085] text-base max-w-xl mx-auto">
-            Every module compounds on the previous one. Beginner-friendly in
+            A structured 12-month career program designed to take you from
             <br className="hidden md:block" />
-            Week 1, deployment-ready by Week 24.
+            fundamentals to industry-ready AI skills.
           </p>
         </div>
 

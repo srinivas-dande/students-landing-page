@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeaderWithBanner() {
   return (
-    <>
+    <div className="sticky top-0 z-[999]">
       {/* Frame 1: Red Notification Banner */}
       <div className="hidden md:block bg-[#CF2030] w-full py-3 px-4">
         <div className="max-w-[1440px] mx-auto flex items-center justify-center gap-2">
@@ -49,6 +49,6 @@ export default function HeaderWithBanner() {
           </button>
         </div>
       </header>
-    </>
+    </div>
   );
 }
