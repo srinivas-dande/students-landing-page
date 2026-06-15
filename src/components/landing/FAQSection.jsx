@@ -5,27 +5,53 @@ import { useState } from 'react';
 const faqs = [
   {
     question: "Do I need prior coding or ML experience to join?",
-    answer: "This course is designed for anyone who wants to build a career in AI/ML. It is suitable for freshers, working professionals, career switchers, non-IT, and non-engineering backgrounds. No prior experience in AI or Machine Learning is required, as the course starts from fundamentals and gradually moves to advanced concepts."
+    answer: `No prior AI/ML experience is required. We start from the fundamentals and gradually build your skills through a structured 12-month roadmap covering Python, Data Analysis, Machine Learning, Deep Learning, Generative AI, and MLOps. 
+    
+    Whether you're a fresher, software engineer, or an engineer from a non-CS background such as Mechanical, ECE, or Civil, the program is designed to help you transition into AI/ML with confidence.`
+    
   },
   {
-    question: "Will this be too much to manage alongside my college coursework?",
-    answer: "This is how 100% of our student cohort does it, alongside college. Live sessions are weekends only. Every class is recorded within 24 hours. Weekday work is 2–3 hours. During exam seasons, you can slow down and catch up without losing momentum. Every student who completed the course in 2024 was managing a full college load at the same time."
+    question: "I'm from a non-CS background (Mechanical / ECE / Civil). Is this program right for me?",
+    answer: `Yes. You do not need a Computer Science degree to build a career in AI/ML. Many of our students come from Mechanical, ECE, Civil, and other engineering backgrounds. In fact, domain expertise can be a strong advantage when applying AI to real-world problems. 
+    
+    Our program starts from the fundamentals and helps you build the programming, data, and machine learning skills needed to transition into AI/ML roles while leveraging your existing engineering knowledge.`
   },
   {
-    question: 'Is placement guaranteed, or is it just "support"?',
-    answer: "We're direct: no course can legally guarantee employment. What we provide is specific and accountable, 5 mock interviews, resume review, direct referrals to 40+ companies, and an active placement team tracking every student's progress. 87% of students who complete the full course receive an offer within 3 months. That track record is what we stand behind, not a promise, but a result you can verify."
-  },
-  {
-    question: "How is this different from Udemy, Coursera, or free YouTube AI courses?",
-    answer: "Those give you knowledge. Dandes gives you outcomes. The difference lives in what can't be put online, real portfolio projects you own, feedback from active ML engineers, mock interviews that simulate actual company rounds, and a placement team that knows who's hiring right now. A Coursera certificate tells a recruiter you watched videos. A Dandes portfolio tells them you can do the work. One earns a scroll past. The other earns an interview invite."
+    question: 'Will this be too much to manage alongside my college coursework?',
+    answer: `The program is specifically designed for students and working professionals. Classes run from 8:00 P.M. to 10:00 P.M. (Monday to Thursday), and all sessions are recorded and shared within 24 hours. 
+    
+    This allows you to balance your college academics while steadily building AI/ML skills. During exams or busy periods, you can learn at your own pace and catch up using the recordings.`
   },
   {
     question: "What happens if I fall behind or miss sessions?",
-    answer: "Every session is recorded and available within 24 hours, you never lose content permanently. We also track progress for every student in the cohort. If someone falls more than 2 weeks behind, their assigned mentor proactively reaches out to build a catch-up plan. No student who wanted to finish has been left without a path to completion."
+    answer: "Don't worry. Every live session is recorded and made available within 24 hours, so you can learn at your own pace when needed. We also monitor student progress throughout the program. If you fall behind, our team will help you create a catch-up plan and get back on track."
   },
   {
-    question: "I'm from a non-CS background (Mechanical / ECE / Commerce). Is this right for me?",
-    answer: "Not just right, often an advantage. Domain expertise is what makes AI practitioners genuinely valuable. A Mechanical graduate who understands manufacturing and can build a predictive maintenance model is more hirable in industrial AI than a CS graduate who knows the theory but not the business problem. We've built specific entry pathways for engineering non-CS and commerce backgrounds, and our placement record includes students from ECE, Mechanical, Civil, and BBA."
+    question: "What kind of projects will I build during the program?",
+    answer: `You'll work on real-world AI/ML projects covering Machine Learning, Deep Learning, Generative AI, Agentic AI, and MLOps. These projects are designed to help you apply concepts, build a strong portfolio, and gain practical experience solving real business problems. 
+    
+    By the end of the program, you'll have multiple industry-relevant projects that showcase your AI engineering skills to recruiters and hiring managers.`
+  },
+  {
+  question: "How is this different from Udemy, Coursera, or free YouTube AI courses?",
+  answer: `Online courses are great for learning concepts. Our focus is helping you apply those concepts to build a career in AI/ML.
+
+  With Dandes Academy, you get:
+
+  • Structured 12-month learning path
+  • Live instructor-led training
+  • Real-world portfolio projects
+  • Mentorship and personalized guidance
+  • Mock interviews and career preparation
+  • A learning community of like-minded professionals
+
+The goal is not just to complete a course, but to build the skills, projects, and confidence needed for AI/ML roles.`
+},
+  {
+    question: "Is placement guaranteed, or is it just 'support'?",
+    answer: `No institute can legally guarantee a job. What we can guarantee is dedicated career support throughout your journey. 
+    
+    You'll receive guidance on resume building, interview preparation, portfolio development, mock interviews, and job search strategies. Our team works closely with students to help them become industry-ready and improve their chances of securing AI/ML opportunities.`
   }
 ];
 
@@ -72,9 +98,9 @@ export default function FAQSection() {
               
               {openIndex === index && (
                 <div className="px-6 pb-5">
-                  <p className="text-[#6B7280] text-sm md:text-base leading-relaxed">
+                  <div className="text-[#6B7280] text-sm md:text-base leading-relaxed whitespace-pre-line">
                     {faq.answer}
-                  </p>
+                  </div>
                 </div>
               )}
             </div>

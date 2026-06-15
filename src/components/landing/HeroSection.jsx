@@ -8,7 +8,6 @@ export default function HeroSection() {
     '20+ Years Training Experience',
     'Mock Interviews and Industry Projects',
     'Career Guidance & Placement Assistance',
-    
   ];
 
   const [formData, setFormData] = useState({
@@ -198,9 +197,9 @@ export default function HeroSection() {
 
           
         </div>
-
+ 
         {/* Right Form */}
-        <div className="w-full lg:w-[420px] bg-white rounded-2xl shadow-lg p-5 md:p-6">
+        <div className="w-full lg:w-[420px] lg:ml-8 bg-white rounded-2xl shadow-lg p-5 md:p-6">
           <h2 className="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-2">
             Get AI & Machine Learning Program Details
           </h2>

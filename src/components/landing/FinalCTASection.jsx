@@ -3,11 +3,10 @@ import { useState, useEffect } from "react";
 
 export default function FinalCTASection() {
   const checkItems = [
-    '650+ students successfully placed',
-    '₹17 LPA average first offer, no experience required',
-    'Fits fully around your college schedule',
-    '7-day full refund, no risk to try',
-    'Only 23 seats left in the June 25th cohort'
+    '25,000+ Students Trained since 2005',
+    '20+ Years Training Experience',
+    'Mock Interviews and Industry Projects',
+    'Career Guidance & Placement Assistance',
   ];
 
   const [formData, setFormData] = useState({
@@ -183,17 +182,17 @@ export default function FinalCTASection() {
             {/* Right Form Card */}
             <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-7 shadow-sm">
               <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">
-                Reserve Your Seat, July 2025
+                Get AI & Machine Learning Program Details
               </h3>
               <p className="text-[#6B7280] text-sm mb-6">
-                Counsellor will WhatsApp you within 1 hour with full details, fees, and payment options.
+                Fill in your details and our team will contact you shortly to discuss the program, career opportunities, fee structure, and admission process.
               </p>
 
               {/* Alert */}
               <div className="bg-[#FEF3C7] rounded-lg px-4 py-3 mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 bg-[#F59E0B] rounded-full"></span>
                 <span className="text-[#D97706] text-sm font-medium">
-                  Only 23 seats remaining · July 12 start
+                  Batch-3 Filling Fast – Only 23 Seats Left
                 </span>
               </div>
 
