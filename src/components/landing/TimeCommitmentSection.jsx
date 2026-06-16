@@ -38,7 +38,7 @@ export default function TimeCommitmentSection() {
   },
   {
     image: '/icons/recording.png',
-    title: 'Lifetime Access to Recordings',
+    title: 'Access to Class Recordings',
     description:
       `Learn Anytime, Revisit Anytime
 

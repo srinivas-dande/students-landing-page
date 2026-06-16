@@ -59,10 +59,10 @@ export default function PortfolioSection() {
       title: 'Your Domain Capstone Project',
       description: 'Build a complete AI application from problem definition to deployment in your chosen domain such as Healthcare, Finance, E-Commerce, Education, or Manufacturing.',
       tags: ['Python', 'ML', 'DL', 'GenAI', 'Agentic AI', 'MLOps', 'Cloud Deployment'],
-      companies: ['Healthcare', 'Finance', 'E-Commerce', 'Education', 'Manufacturing'],
+      companies: [],
       isCapstone: true,
       domainTag: 'Your choice of domain',
-      footerText: 'This is the project that closes your interviews.'
+      footerText: 'This is the project that helps you connect your past experience with future AI/ML roles.'
     }
   ];
 
@@ -135,7 +135,7 @@ export default function PortfolioSection() {
           <div className="mt-auto pt-5 border-t border-[#E5E7EB]">
             {project.companies.length > 0 && (
               <p className="text-xs text-[#9CA3AF]">
-                Used by teams at:{' '}
+                Inspired by real-world use cases from:{' '}
                 <span className="text-[#4F46E5] font-medium">
                   {project.companies.join(', ')}
                 </span>
@@ -237,7 +237,7 @@ export default function PortfolioSection() {
               {/* Companies */}
               {project.companies.length > 0 && (
                 <p className="text-xs text-[#9CA3AF]">
-                  Used by teams at:{' '}
+                  Inspired by real-world use cases from:{' '}
                   <span className="text-[#4F46E5] font-medium">
                     {project.companies.join(', ')}
                   </span>

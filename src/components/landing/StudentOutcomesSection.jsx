@@ -9,7 +9,7 @@ const testimonials = [
     details: 'Final Year · B.Tech - CSE · Pune',
     subDetails: 'Joined during 3rd Year · No Prior Work Experience',
     quote: '"I graduated from a Tier-2 college with no prior industry experience. What helped me stand out was not my grades — it was the projects. The Dandes AI/ML program helped me build real AI projects that I could showcase on GitHub and confidently discuss during interviews."',
-    role: '',
+    role: 'Joined Dandes Academy in January 2026 Batch',
     company: '',
     salary: ''
   },
@@ -19,7 +19,7 @@ const testimonials = [
     details: 'Pre-Final Year · B.Tech - Civil · Chennai',
     subDetails: 'Started During 3rd Year · No Prior AI/ML Background',
     quote: '"I joined the AI/ML program during my 3rd year with no prior background in AI/ML. The structured learning path and hands-on projects helped me build a portfolio that stood out from most students in my batch. By the time placements started, I had real projects to showcase and discuss with confidence."',
-    role: '',
+    role: 'Joined Dandes Academy in January 2026 Batch',
     company: '',
     salary: ''
   },
@@ -29,7 +29,7 @@ const testimonials = [
     details: 'Pre-Final Year · B.Tech - Mechanical · Andhra Pradesh',
     subDetails: 'Started During 3rd Year · Non-CS Background',
     quote: '"Everyone told me AI/ML was only for Computer Science students. The program started from the fundamentals and made the learning journey approachable. The projects helped me build confidence and showed me that consistency and problem-solving matter more than your branch."',
-    role: '',
+    role: 'Joined Dandes Academy in January 2026 Batch',
     company: '',
     salary: ''
   },
@@ -39,7 +39,7 @@ const testimonials = [
     details: '2nd Year → Completed in 3rd Year · IT Engineering · Hyderabad',
     subDetails: 'Commerce student in 11th–12th',
     quote: '"I completed the program while managing college exams, assignments, and semester projects. The schedule was easy to balance alongside academics. The mock interviews and project reviews helped me understand what recruiters actually look for and prepared me much better for interviews"',
-    role: '',
+    role: 'Joined Dandes Academy in June 2025 Batch',
     company: '',
     salary: ''
   },
@@ -49,7 +49,7 @@ const testimonials = [
     details: 'Final Year · BCA · Bihar',
     subDetails: 'Started During 2nd Year · No AI/ML Background',
     quote: '"Initially, I thought AI/ML would be difficult to learn. The program started from the fundamentals and gradually progressed into Machine Learning, Generative AI, and real-world projects. By the end, I had a strong project portfolio and a clear understanding of how AI is applied in industry."',
-    role: '',
+    role: 'Joined Dandes Academy in June 2025 Batch',
     company: '',
     salary: ''
   }
