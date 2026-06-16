@@ -6,7 +6,8 @@ export default function HeroSection() {
   const checkItems = [
     '25,000+ Students Trained since 2005',
     '20+ Years Training Experience',
-    'Mock Interviews and Industry Projects',
+    '6 Industry-Ready AI/ML Projects',
+    '3 Structured Mock Interviews',
     'Career Guidance & Placement Assistance',
   ];
 
@@ -304,13 +305,13 @@ export default function HeroSection() {
                     className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
                   >
                     <option value="">Select Qualification</option>
-                    <option value="B.Tech">B.E / B.Tech</option>
-                    <option value="B.E">M.E / M.Tech</option>
+                    <option value="B.E / B.Tech">B.E / B.Tech</option>
+                    <option value="M.E / M.Tech">M.E / M.Tech</option>
                     <option value="BCA">BCA</option>
                     <option value="MCA">MCA</option>
-                    <option value="B.Sc">B.Sc(C.S)</option>
-                    <option value="B.Sc">M.Sc(C.S)</option>
-                
+                    <option value="B.Sc(C.S)">B.Sc(C.S)</option>
+                    <option value="M.Sc(C.S)">M.Sc(C.S)</option>
+                 
                   </select>
                   {errors.qualification && (
                     <p className="text-red-500 text-xs mt-1">
@@ -340,9 +341,9 @@ export default function HeroSection() {
                   >
                     
                     <option value="">Select year</option>
-                    <option value="2026">2029</option>
-                    <option value="2026">2028</option>
-                    <option value="2026">2027</option>
+                    <option value="2029">2029</option>
+                    <option value="2028">2028</option>
+                    <option value="2027">2027</option>
                     <option value="2026">2026</option>
                     <option value="2025">2025</option>
                     <option value="2024">2024</option>

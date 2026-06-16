@@ -4,44 +4,54 @@ import { useState } from 'react';
 
 const testimonials = [
   {
-    initials: 'AR',
-    name: 'Aditya Rao',
-    details: 'Final Year · CSE · Tier-2 college, Pune',
-    subDetails: 'No prior work experience · Joined in 3rd year',
-    quote: '"I graduated with a 7.2 CGPA from a mid-tier college. I knew I wasn\'t going to win on pedigree. The Dandes AI/ML course gave me 4 real projects on my GitHub, that\'s what the Mu Sigma interviewer spent 20 minutes asking about. Not my grades. My projects."',
-    role: 'ML Engineer',
-    company: 'Mu Sigma, Bangalore · Batch 2024',
-    salary: '₹17 LPA'
+    initials: 'SP',
+    name: 'Santosh Pandey',
+    details: 'Final Year · B.Tech - CSE · Pune',
+    subDetails: 'Joined during 3rd Year · No Prior Work Experience',
+    quote: '"I graduated from a Tier-2 college with no prior industry experience. What helped me stand out was not my grades — it was the projects. The Dandes AI/ML program helped me build real AI projects that I could showcase on GitHub and confidently discuss during interviews."',
+    role: '',
+    company: '',
+    salary: ''
   },
   {
     initials: 'PK',
     name: 'Priya Krishnan',
-    details: 'Pre-final Year · ECE · Chennai',
-    subDetails: 'Started during 3rd year · Commerce background in school',
-    quote: '"I started these artificial intelligence classes online in my 3rd year. By the time placements opened, I had an ML portfolio nobody else in my batch had. Two companies reached out before I had even applied. I didn\'t expect that to happen."',
-    role: 'AI Engineer',
-    company: 'Fractal Analytics · Batch 2024',
-    salary: '₹19.5 LPA'
+    details: 'Pre-Final Year · B.Tech - Civil · Chennai',
+    subDetails: 'Started During 3rd Year · No Prior AI/ML Background',
+    quote: '"I joined the AI/ML program during my 3rd year with no prior background in AI/ML. The structured learning path and hands-on projects helped me build a portfolio that stood out from most students in my batch. By the time placements started, I had real projects to showcase and discuss with confidence."',
+    role: '',
+    company: '',
+    salary: ''
   },
   {
-    initials: 'RS',
-    name: 'Priya Krishnan',
-    details: 'Final Year · Mechanical Engineering · Nagpur',
-    subDetails: 'Non-CS background · Joined as a complete beginner',
-    quote: '"Everyone told me AI/ML was only for CS students. These are genuinely AI courses for beginners, it started from foundations. I landed a role most CS students in my batch couldn\'t get an interview for. My Mechanical background was actually an advantage."',
-    role: 'Data Scientist',
-    company: 'Lam Research · Batch 2023',
-    salary: '₹16 LPA'
+    initials: 'GR',
+    name: 'Ganapathi Reddy',
+    details: 'Pre-Final Year · B.Tech - Mechanical · Andhra Pradesh',
+    subDetails: 'Started During 3rd Year · Non-CS Background',
+    quote: '"Everyone told me AI/ML was only for Computer Science students. The program started from the fundamentals and made the learning journey approachable. The projects helped me build confidence and showed me that consistency and problem-solving matter more than your branch."',
+    role: '',
+    company: '',
+    salary: ''
   },
   {
-    initials: 'SM',
-    name: 'Sneha Mehta',
+    initials: 'RB',
+    name: 'Ramesh Babu',
     details: '2nd Year → Completed in 3rd Year · IT Engineering · Hyderabad',
     subDetails: 'Commerce student in 11th–12th',
-    quote: '"I did this AI course online for students while managing exams and a semester project, fully manageable with a college schedule. The mock interviews were what made the real difference. I walked into placements knowing exactly what was coming."',
-    role: 'ML Associate',
-    company: 'Sigmoid Analytics · Batch 2024',
-    salary: '₹15 LPA'
+    quote: '"I completed the program while managing college exams, assignments, and semester projects. The schedule was easy to balance alongside academics. The mock interviews and project reviews helped me understand what recruiters actually look for and prepared me much better for interviews"',
+    role: '',
+    company: '',
+    salary: ''
+  },
+  {
+    initials: 'AY',
+    name: 'Akash Yadav',
+    details: 'Final Year · BCA · Bihar',
+    subDetails: 'Started During 2nd Year · No AI/ML Background',
+    quote: '"Initially, I thought AI/ML would be difficult to learn. The program started from the fundamentals and gradually progressed into Machine Learning, Generative AI, and real-world projects. By the end, I had a strong project portfolio and a clear understanding of how AI is applied in industry."',
+    role: '',
+    company: '',
+    salary: ''
   }
 ];
 

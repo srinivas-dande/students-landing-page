@@ -2,10 +2,10 @@
 
 export default function StatsBanner() {
   const stats = [
-    { number: '650', suffix: '+', label: 'STUDENTS PLACED' },
-    { number: '₹17', suffix: 'L', label: 'AVG FIRST OFFER' },
-    { number: '87', suffix: '%', label: 'PLACED IN 3 MONTHS' },
-    { number: '40', suffix: '+', label: 'HIRING COMPANIES' },
+    { number: '25,000+',  label: 'STUDENTS TRAINED' },
+    { number: '20+ YEARS',  label: 'EXPERIENCE' },
+    { number: '6',  label: 'AI/ML PROJECTS' },
+    { number: '3',  label: 'MOCK INTERVIEWS' },
   ];
 
   return (
@@ -20,8 +20,8 @@ export default function StatsBanner() {
               }`}
             >
               <div className="text-white">
-                <span className="text-5xl md:text-6xl font-bold">{stat.number}</span>
-                <span className="text-3xl md:text-4xl font-normal">{stat.suffix}</span>
+                <span className="text-3xl md:text-4xl font-bold">{stat.number}</span>
+                
               </div>
               <p className="text-white text-sm md:text-base tracking-wider mt-2 font-semibold">
                 {stat.label}
