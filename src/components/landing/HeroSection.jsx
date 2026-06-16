@@ -16,8 +16,7 @@ export default function HeroSection() {
     whatsapp_number: "",
     year_of_passout: "",
     qualification: "",
-    branch_or_stream: "",
-    city: "",
+    
  
     utm_source: "",
     utm_medium: "",
@@ -82,13 +81,7 @@ export default function HeroSection() {
       newErrors.qualification = "Please select qualification";
     }
 
-    if (!formData.branch_or_stream) {
-      newErrors.branch_or_stream = "Please select branch";
-    }
-
-    if (!formData.city.trim()) {
-      newErrors.city = "City is required";
-    }
+    
 
     setErrors(newErrors);
 
@@ -125,8 +118,7 @@ export default function HeroSection() {
           whatsapp_number: "",
           year_of_passout: "",
           qualification: "",
-          branch_or_stream: "",
-          city: "",
+          
         }));
 
         setErrors({});
@@ -159,7 +151,7 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 bg-[#D8EAE2] rounded-full px-4 py-1.5 mb-8">
             <span className="w-2 h-2 bg-[#08A85B] rounded-full"></span>
             <span className="text-[#08A85B] text-sm font-bold">
-              Batch-3 Admissions Open
+              AI & Machine Learning Career Program
             </span>
           </div>
 
@@ -177,7 +169,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-[#475467] text-base md:text-[15px] leading-relaxed mb-8 max-w-[600px]">
-            Learn AI & Machine Learning through live instructor-led training, real-world projects, and structured career guidance. Designed for students and fresh graduates looking to build successful AI/ML careers.
+            India's most outcome-focused Al program for engineering students. Build real-world projects while you study, gain industry-ready AI & Machine Learning Skills, and access guaranteed placement support.
           </p>
 
           {/* Checklist */}
@@ -201,7 +193,7 @@ export default function HeroSection() {
         {/* Right Form */}
         <div className="w-full lg:w-[420px] lg:ml-8 bg-white rounded-2xl shadow-lg p-5 md:p-6">
           <h2 className="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-2">
-            Get AI & Machine Learning Program Details
+            Get AI & Machine Learning Career Program Details
           </h2>
           <p className="text-[#475467] text-sm mb-6">
             Fill in your details and our team will contact you shortly to discuss the program, career opportunities, fee structure, and admission process.
@@ -291,8 +283,46 @@ export default function HeroSection() {
               </div>
             </div>
 
+            
+
             {/* Year and Branch Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+              <div>
+                <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
+                  Qualification
+                </label>
+                <div className="relative">
+                  <select
+                    value={formData.qualification}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        qualification: e.target.value,
+                      })
+                    }
+                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
+                  >
+                    <option value="">Select Qualification</option>
+                    <option value="B.Tech">B.E / B.Tech</option>
+                    <option value="B.E">M.E / M.Tech</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="B.Sc">B.Sc(C.S)</option>
+                    <option value="B.Sc">M.Sc(C.S)</option>
+                
+                  </select>
+                  {errors.qualification && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.qualification}
+                    </p>
+                  )}
+                  <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#98A2B3] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+
               <div>
                 <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
                   Year of Passout
@@ -308,7 +338,11 @@ export default function HeroSection() {
                     }
                     className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
                   >
+                    
                     <option value="">Select year</option>
+                    <option value="2026">2029</option>
+                    <option value="2026">2028</option>
+                    <option value="2026">2027</option>
                     <option value="2026">2026</option>
                     <option value="2025">2025</option>
                     <option value="2024">2024</option>
@@ -326,101 +360,9 @@ export default function HeroSection() {
                   </svg>
                 </div>
               </div>
-              <div>
-                <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                  Qualification
-                </label>
-                <div className="relative">
-                  <select
-                    value={formData.qualification}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        qualification: e.target.value,
-                      })
-                    }
-                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
-                  >
-                    <option value="">Select Qualification</option>
-                    <option value="B.Tech">B.Tech</option>
-                    <option value="B.E">B.E</option>
-                    <option value="BCA">BCA</option>
-                    <option value="B.Sc">B.Sc</option>
-                    <option value="B.Com">B.Com</option>
-                    <option value="M.Tech">M.Tech</option>
-                    <option value="MCA">MCA</option>
-                    <option value="MBA">MBA</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  {errors.qualification && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.qualification}
-                    </p>
-                  )}
-                  <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#98A2B3] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                  Branch / Stream
-                </label>
-                <div className="relative">
-                  <select
-                    value={formData.branch_or_stream}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        branch_or_stream: e.target.value,
-                      })
-                    }
-                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
-                  >
-                    <option value="">Select Branch</option>
-                    <option value="CSE">CSE</option>
-                    <option value="IT">IT</option>
-                    <option value="ECE">ECE</option>
-                    <option value="EEE">EEE</option>
-                    <option value="Mechanical">Mechanical</option>
-                    <option value="Civil">Civil</option>
-                    <option value="Commerce">Commerce</option>
-                    <option value="BCA">BCA</option>
-                    <option value="B.Sc">B.Sc</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  {errors.branch_or_stream && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.branch_or_stream}
-                    </p>
-                  )}
-                  <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#98A2B3] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                  City
-                </label>
-                <input
-                  type="text"
-                  value={formData.city}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      city: e.target.value,
-                    })
-                  }
-                  placeholder="Hyderabad"
-                  className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
-                />
-                {errors.city && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.city}
-                  </p>
-                )}
-              </div>
+              
+              
+              
             </div>
 
             {successMessage && (

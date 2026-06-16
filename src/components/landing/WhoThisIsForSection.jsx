@@ -8,32 +8,27 @@ export default function WhoThisIsForSection() {
   const tabs = [
     {
       label: 'Engineering Students',
-      title: 'Engineering Students (CS / ECE / Mech / EEE)',
-      description: "Whether you have a CS background or not, the course starts from your actual level and builds toward production-ready AI skills that complement your engineering domain.",
+      title: 'Engineering Students (CS / ECE / Mechanical / EEE / Civil)',
+      description: "Whether you're from a Computer Science background or another engineering discipline, this program starts from the fundamentals and helps you build industry-ready AI/ML skills.",
       benefits: [
-        'Starting from basic Python, no prior ML experience needed',
-        'Fits alongside a full college schedule, 10 hrs/week',
-        'AI workshops for students at all experience levels'
+        'Build AI/ML skills alongside your college studies',
+        'Learn ML, DL, Generative AI and Agentic AI from scratch',
+        'Develop real-world projects and a strong GitHub portfolio',
+        'Stand out during placements and job interviews',
+        'Prepare for future AI/ML career opportunities'
       ]
     },
+    
     {
-      label: 'Commerce, BBA & MBA Students',
-      title: 'Commerce, BBA & MBA Students',
-      description: "This is one of the few artificial intelligence courses for commerce students that doesn't assume a heavy coding background. Business domain knowledge is a genuine advantage in AI and we build on it.",
+      label: 'Graduates & Job Seekers',
+      title: 'Graduates & Job Seekers',
+      description: "If you've recently graduated or are looking to improve your career opportunities, this program provides a structured pathway to build practical AI/ML skills and industry-relevant experience.",
       benefits: [
-        'Business analytics and AI applications track available',
-        'No advanced maths prerequisites, we teach what you need',
-        'Placed commerce students at analytics and AI product companies'
-      ]
-    },
-    {
-      label: 'Graduates & Early Job Seekers',
-      title: 'Graduates & Early Job Seekers',
-      description: "Already graduated but the placement season didn't go how you hoped? Artificial intelligence courses after graduation are one of the most effective repositioning moves you can make before your career calcifies.",
-      benefits: [
-        'Intensive 6-month reskill with direct placement support',
-        'Faster track for those with a CS foundation from their degree',
-        'Resume rebuilt around AI/ML projects before you apply'
+        'Build job-ready AI/ML skills through a structured 12-month roadmap',
+        'Gain hands-on experience with real-world projects',
+        'Strengthen your resume with real-world AI/ML projects',
+        'Prepare for technical interviews and AI/ML roles',
+        'Prepare for technical interviews and AI/ML roles'
       ]
     }
   ];
@@ -45,12 +40,12 @@ export default function WhoThisIsForSection() {
         <div className="text-center mb-12">
           <span className="text-[#4F46E5] text-sm font-semibold">Who This Is For</span>
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-[#111827] mt-4 leading-tight">
-            This course was built for students who don&apos;t fit the<br />
-            <span className="text-[#DC2626]">&quot;ideal candidate&quot;</span> mold
+            Built for students and job seekers who want to <br />
+            <span className="text-[#DC2626]">&quot;stand out in a competitive &quot;</span>job market.
           </h2>
           <p className="text-[#6B7280] mt-4 text-base">
-            Every module compounds on the previous one. Beginner-friendly in<br />
-            Week 1, deployment-ready by Week 24.
+            Start with the fundamentals, build real-world AI/ML projects, and develop<br />
+            the skills employers look for in today's technology roles.
           </p>
         </div>
 

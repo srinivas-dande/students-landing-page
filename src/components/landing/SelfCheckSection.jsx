@@ -5,8 +5,8 @@ export default function SelfCheckSection() {
     { bold: "You're currently in college,", text: "1st to final year and want to graduate with something that separates you from your batch" },
     { bold: "You have no prior AI/ML experience", text: "but you're technical enough to follow logic and willing to put in 10 hours a week" },
     { bold: "You want a real portfolio,", text: "GitHub projects, deployed models, things you can walk an interviewer through not just a certificate" },
-    { bold: "You're aiming for ₹12–20 LPA", text: "at your first job and understand that the gap between that and a ₹4 LPA offer is skills, not luck" },
-    { bold: "You're from a non-CS background,", text: "ECE, Mechanical, Commerce, Civil and want a course that acknowledges your domain instead of ignoring it" },
+    { bold: "You're aiming for ₹9–20 LPA", text: "at your first job and understand that the gap between that and a ₹4 LPA offer is skills, not luck" },
+    { bold: "You're from a non-CS background,", text: "ECE, Mechanical, Civil and want a course that acknowledges your domain instead of ignoring it" },
     { bold: "You've already graduated", text: "and the placement season didn't go how you hoped and you want to reposition before the market moves on" },
     { bold: "You want structured accountability,", text: "live classes, deadlines, mentor check-ins not another course you'll watch 3 modules of and abandon" },
   ];
@@ -14,7 +14,7 @@ export default function SelfCheckSection() {
   const notForYouItems = [
     { bold: "You're looking for something passive", text: "if the plan is to watch videos at 1.5x speed without doing the projects, this course won't work for you" },
     { bold: "You can't commit 10 hours a week", text: "right now, if your schedule is genuinely full for the next 6 months, wait for the next cohort rather than start and drop" },
-    { bold: "You want a quick shortcut", text: "this is a 6-month programme that requires real effort. There's no 4-week path to a ₹17 LPA AI/ML offer and anyone who tells you otherwise is lying" },
+    { bold: "You want a quick shortcut", text: "this is a 12-month programme that requires real effort. There's no 4-week path to a ₹17 LPA AI/ML offer and anyone who tells you otherwise is lying" },
     { bold: "You're looking for a guaranteed job", text: "we don't guarantee placements and no honest course does. We give you the best possible shot, but the effort is yours to bring" },
     { bold: "You have zero interest in coding", text: "this course involves writing real code. If that's not something you want to build toward at all, this isn't the right fit" },
   ];
@@ -29,7 +29,7 @@ export default function SelfCheckSection() {
             Is this <span className="text-[#DC2626]">course</span> right for you?
           </h2>
           <p className="text-[#6B7280] mt-4 max-w-2xl mx-auto">
-            Be honest with yourself. This course works for the right person and we'd rather you know that before you enroll than after.
+            Be honest with yourself. This program is designed for learners who are serious about building a career in AI & Machine Learning.
           </p>
         </div>
 

@@ -1,11 +1,11 @@
 export default function PlacementSupportSection() {
   const checklistItems = [
-    '5 Structured Mock Interviews',
-    'Resume & LinkedIn Overhaul',
-    'Direct Company Referrals',
-    'Portfolio Build Sessions',
-    'Exclusive Job Channel',
-    '1:1 Mentor Access'
+    'Mock Interviews & Interview Preparation',
+    'Resume & LinkedIn Optimization',
+    'Portfolio & GitHub Review',
+    'Job Search Strategy & Career Guidance',
+    'Exclusive Job & Opportunity Updates',
+    '1:1 Mentor Support'
   ];
 
   return (
