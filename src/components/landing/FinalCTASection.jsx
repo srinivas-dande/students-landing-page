@@ -180,13 +180,7 @@ export default function FinalCTASection() {
                 Fill in your details and our team will contact you shortly to discuss the program, career opportunities, fee structure, and admission process.
               </p>
 
-              {/* Alert */}
-              <div className="bg-[#FEF3C7] rounded-lg px-4 py-3 mb-6 flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#F59E0B] rounded-full"></span>
-                <span className="text-[#D97706] text-sm font-medium">
-                  Batch-3 Filling Fast – Only 23 Seats Left
-                </span>
-              </div>
+              
 
               {/* Form */}
               {/* Form */}
@@ -376,7 +370,7 @@ export default function FinalCTASection() {
 
               {/* Privacy Note */}
               <p className="text-center text-[#98A2B3] text-xs">
-                *Your details are safe. No spam. A counsellor will reach out within 1 hour.
+                *Your details are safe with us. No spam. Our team will contact you shortly.
               </p>
             </form>
           </div>

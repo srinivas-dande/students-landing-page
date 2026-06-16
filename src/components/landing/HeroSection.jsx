@@ -393,7 +393,6 @@ export default function HeroSection() {
             {/* Privacy Note */}
             <p className="text-center text-[#98A2B3] text-xs">
               *Your details are safe with us. No spam. Our team will contact you shortly.
-            </p>
           </form>
         </div>
       </div>
