@@ -5,6 +5,10 @@ import { useState } from 'react';
 export default function CurriculumSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
   const modules = [
     {
       weeks: 'PHASE 1',
@@ -78,6 +82,52 @@ export default function CurriculumSection() {
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? -1 : index);
   };
+
+  const handleDownload = async () => {
+    if (loading) return;
+
+    if (!email) {
+      setMessage("Please enter your email.");
+      return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    setMessage("Please enter a valid email address.");
+    return;
+  }
+
+  try {
+    setMessage("");
+    setLoading(true);
+
+    const res = await fetch("/api/email-subscription", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        section: "download",
+      }),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      setMessage("✅ Curriculum sent successfully! Please check your inbox.");
+      setEmail("");
+    } else {
+      setMessage(data.message || "Something went wrong.");
+    }
+  } catch (error) {
+    console.error(error);
+    setMessage("❌ Failed to send curriculum.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const AccordionItem = ({ module, index }) => {
     const isOpen = openIndex === index;
@@ -165,16 +215,47 @@ export default function CurriculumSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <input
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Your email"
             className="w-full sm:w-72 px-4 py-3 border border-[#D0D5DD] rounded-sm text-[#667085] text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#DC2626] focus:border-transparent"
           />
-          <button className="w-full sm:w-auto bg-[#DC2626] hover:bg-[#b91c1c] text-white font-medium px-6 py-3 rounded-sm flex items-center justify-center gap-3 transition-colors">
-            Download the Curriculum
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-          </button>
+          <button
+  onClick={handleDownload}
+  disabled={loading}
+  className="w-full sm:w-auto bg-[#DC2626] hover:bg-[#b91c1c] disabled:opacity-50 text-white font-medium px-6 py-3 rounded-sm flex items-center justify-center gap-3 transition-colors"
+>
+  {loading ? "Sending..." : "Download the Curriculum"}
+
+  {!loading && (
+    <svg
+      className="w-5 h-5"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+      />
+    </svg>
+  )}
+</button>
         </div>
+
+        {message && (
+  <p
+    className={`mt-4 text-center font-medium ${
+      message.startsWith("✅")
+        ? "text-green-600"
+        : "text-red-600"
+    }`}
+  >
+    {message}
+  </p>
+)}
       </div>
     </section>
   );

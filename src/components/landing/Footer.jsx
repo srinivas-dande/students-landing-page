@@ -1,6 +1,59 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const handleSubscribe = async () => {
+    if (loading) return;
+
+    if (!email) {
+      setMessage('Please enter your email.');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      setMessage('Please enter a valid email address.');
+      return;
+    }
+
+    try {
+      setLoading(true);
+      setMessage('');
+
+      const res = await fetch('/api/email-subscription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          section: 'subscribe',
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setMessage('✅ Subscribed successfully!');
+        setEmail('');
+      } else {
+        setMessage(data.message || 'Something went wrong.');
+      }
+    } catch (error) {
+      console.error(error);
+      setMessage('❌ Failed to subscribe.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="bg-[#0F2A3D] text-white">
       <div className="max-w-[1440px] mx-auto px-6 md:px-16 py-16">
@@ -8,7 +61,6 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-12">
           {/* Left Side - Logo and Tagline */}
           <div className="max-w-md">
-            {/* Logo */}
             <div className="mb-6">
               <Image
                 src="/icons/logo.png"
@@ -28,43 +80,86 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email"
                 className="flex-1 px-4 py-4 bg-transparent border border-white rounded-lg text-white placeholder-[#64748B] focus:outline-none focus:border-[#CF2030]"
               />
-              <button className="bg-[#CF2030] hover:bg-[#B91C2C] text-white font-semibold px-8 py-4 rounded-lg transition-colors whitespace-nowrap">
-                Subscribe
+
+              <button
+                onClick={handleSubscribe}
+                disabled={loading}
+                className="bg-[#CF2030] hover:bg-[#B91C2C] text-white font-semibold px-8 py-4 rounded-lg transition-colors whitespace-nowrap disabled:opacity-50"
+              >
+                {loading ? 'Subscribing...' : 'Subscribe'}
               </button>
             </div>
+
+            {message && (
+              <p
+                className={`mb-4 text-sm ${
+                  message.startsWith('✅')
+                    ? 'text-green-400'
+                    : 'text-red-400'
+                }`}
+              >
+                {message}
+              </p>
+            )}
+
             <p className="text-white text-[#64748B] text-sm mb-6">
-              By subscribing you agree to our Privacy Policy and consent to receive updates from Dandes Academy
+              By subscribing you agree to our Privacy Policy and consent to
+              receive updates from Dandes Academy
             </p>
-            
+
             {/* Social Icons */}
             <div className="flex items-center gap-4">
-              {/* Facebook */}
               <div className="flex items-center gap-4">
-  <a href="#">
-    <Image src="/icons/facebook.png" alt="Facebook" width={24} height={24} />
-  </a>
+                <a href="#">
+                  <Image
+                    src="/icons/facebook.png"
+                    alt="Facebook"
+                    width={24}
+                    height={24}
+                  />
+                </a>
 
-  <a href="#">
-    <Image src="/icons/instagram.png" alt="Instagram" width={24} height={24} />
-  </a>
+                <a href="#">
+                  <Image
+                    src="/icons/instagram.png"
+                    alt="Instagram"
+                    width={24}
+                    height={24}
+                  />
+                </a>
 
-  <a href="#">
-    <Image src="/icons/twitter.png" alt="Twitter" width={24} height={24} />
-  </a>
+                <a href="#">
+                  <Image
+                    src="/icons/twitter.png"
+                    alt="Twitter"
+                    width={24}
+                    height={24}
+                  />
+                </a>
 
-  <a href="#">
-    <Image src="/icons/linkedin.png" alt="LinkedIn" width={24} height={24} />
-  </a>
+                <a href="#">
+                  <Image
+                    src="/icons/linkedin.png"
+                    alt="LinkedIn"
+                    width={24}
+                    height={24}
+                  />
+                </a>
 
-  <a href="#">
-    <Image src="/icons/youtube.png" alt="YouTube" width={24} height={24} />
-  </a>
-
-  
-</div>
+                <a href="#">
+                  <Image
+                    src="/icons/youtube.png"
+                    alt="YouTube"
+                    width={24}
+                    height={24}
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -75,14 +170,26 @@ export default function Footer() {
             <p className="text-white text-[#94A3B8] text-sm">
               © 2026 Dandes Academy. All rights reserved.
             </p>
+
             <div className="flex items-center gap-8">
-              <a href="#" className="text-white text-[#94A3B8] hover:text-white text-sm transition-colors">
+              <a
+                href="#"
+                className="text-white text-[#94A3B8] hover:text-white text-sm transition-colors"
+              >
                 Privacy policy
               </a>
-              <a href="#" className="text-white text-[#94A3B8] hover:text-white text-sm transition-colors">
+
+              <a
+                href="#"
+                className="text-white text-[#94A3B8] hover:text-white text-sm transition-colors"
+              >
                 Terms of service
               </a>
-              <a href="#" className="text-white text-[#94A3B8] hover:text-white text-sm transition-colors">
+
+              <a
+                href="#"
+                className="text-white text-[#94A3B8] hover:text-white text-sm transition-colors"
+              >
                 Cookie settings
               </a>
             </div>

@@ -32,7 +32,7 @@ export default function PlacementSupportSection() {
               {checklistItems.map((item, index) => (
                 <div
                   key={index}
-                  className={`flex items-center gap-3 px-4 py-4 ${
+                  className={`flex items-center gap-2 px-3 py-1.5 ${
                     index !== checklistItems.length - 1 ? 'border-b border-[#E5E7EB]' : ''
                   }`}
                 >
@@ -55,27 +55,30 @@ export default function PlacementSupportSection() {
             </div>
 
             {/* Apply Now Button */}
-            <button className="mt-8 w-fit bg-[#CF2030] text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3 hover:bg-[#B91C2C] transition-colors">
-              Apply Now
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </button>
+            <a
+  href="#apply-form"
+  className="mt-8 w-fit bg-[#CF2030] text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3 hover:bg-[#B91C2C] transition-colors"
+>
+  Apply Now
+  <svg
+    className="w-5 h-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17 8l4 4m0 0l-4 4m4-4H3"
+    />
+  </svg>
+</a>
           </div>
 
           {/* Right Image — edge to edge, no padding, no rounded corners */}
           <div className="order-1 lg:order-2 lg:w-1/2 flex justify-end mb-10 lg:mb-0">
-  <div className="w-[85%] h-[300px] md:w-[90%] md:h-[400px] lg:w-[600px] lg:h-[650px]">
+  <div className="w-[75%] h-[250px] md:w-[80%] md:h-[320px] lg:w-[500px] lg:h-[550px]">
     <img
       src="/images/placement-support.jpg"
       alt="Students working together on placement preparation"

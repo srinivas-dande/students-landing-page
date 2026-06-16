@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function HeaderWithBanner() {
@@ -44,9 +46,16 @@ export default function HeaderWithBanner() {
           </button>
 
           {/* Apply Now Button */}
-          <button className="hidden md:block bg-[#C41E3A] hover:bg-[#A01830] text-white font-semibold px-6 py-2 rounded transition-colors">
-            Apply Now
-          </button>
+          <button
+  onClick={() => {
+    document
+      .getElementById("apply-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="hidden md:block bg-[#C41E3A] hover:bg-[#A01830] text-white font-semibold px-6 py-2 rounded transition-colors"
+>
+  Apply Now
+</button>
         </div>
       </header>
     </div>

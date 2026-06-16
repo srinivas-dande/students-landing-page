@@ -60,12 +60,20 @@ export default function SelfCheckSection() {
               ))}
             </ul>
 
-            <button className="w-full mt-8 bg-[#CF2030] hover:bg-[#B91C2C] text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors">
-              Yes, this is me Reserve my seat
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
+            <a
+  href="#apply-form"
+  className="w-full mt-8 bg-[#CF2030] hover:bg-[#B91C2C] text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors"
+>
+  Yes, this is me Reserve my seat
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17 8l4 4m0 0l-4 4m4-4H3"
+    />
+  </svg>
+</a>
           </div>
 
           {/* Right Card - Not For You */}
@@ -101,7 +109,14 @@ export default function SelfCheckSection() {
                 </svg>
               </div>
               <p className="text-[#6B7280] text-sm">
-                Still not sure? Our counsellors will tell you honestly whether this course fits your situation, no sales pressure. <a href="#" className="text-[#CF2030] font-semibold hover:underline">WhatsApp us</a> and ask directly.
+                Still not sure? Our counsellors will tell you honestly whether this course fits your situation, no sales pressure. <a
+  href="https://wa.me/917090366699"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-[#CF2030] font-semibold hover:underline"
+>
+  WhatsApp us
+</a> and ask directly.
               </p>
             </div>
           </div>

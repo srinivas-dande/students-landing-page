@@ -143,7 +143,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="bg-[#F5F7FA] py-12 md:py-16 px-4 md:px-8">
+    <section
+      id="apply-form"
+      className="scroll-mt-32 bg-[#F5F7FA] py-12 md:py-16 px-4 md:px-8"
+    >
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
         
         {/* Left Content */}

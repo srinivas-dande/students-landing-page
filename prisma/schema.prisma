@@ -59,4 +59,11 @@ model ProfessionalsGoogleLead {
   @@map("professionals_google_leads")
 }
 
+model EmailSubscription {
+  sno       Int      @id @default(autoincrement())
+  email     String
+  section   String
+  createdAt DateTime @default(now()) @map("createdat")
 
+  @@map("email_subscription")
+}
