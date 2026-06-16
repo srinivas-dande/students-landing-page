@@ -14,8 +14,7 @@ model StudentGoogleLead {
   whatsapp_number   String
   year_of_passout   String
   qualification     String
-  branch_or_stream  String
-  city              String
+  
 
   utm_source        String?
   utm_medium        String?

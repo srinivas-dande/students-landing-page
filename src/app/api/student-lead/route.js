@@ -7,7 +7,6 @@ export async function POST(request) {
   try {
     const body = await request.json();
 
-    
     const lead = await prisma.studentGoogleLead.create({
       data: {
         full_name: body.full_name,
@@ -15,8 +14,6 @@ export async function POST(request) {
         whatsapp_number: body.whatsapp_number,
         year_of_passout: body.year_of_passout,
         qualification: body.qualification,
-        branch_or_stream: body.branch_or_stream,
-        city: body.city,
 
         utm_source: body.utm_source,
         utm_medium: body.utm_medium,
@@ -31,6 +28,42 @@ export async function POST(request) {
       },
     });
 
+    // ✅ Pabbly Webhook
+    try {
+      const webhookRes = await fetch("https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY0MDYzMTA0MzA1MjZkNTUzZCI_3D_pc/IjU3NjcwNTZlMDYzMDA0MzA1MjZjNTUzNjUxMzEi_pc", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          full_name: body.full_name,
+          email: body.email_id,
+          phone: body.whatsapp_number,
+          year_of_passout: body.year_of_passout,
+          qualification: body.qualification,
+
+          utm_source: body.utm_source,
+          utm_medium: body.utm_medium,
+          utm_campaign: body.utm_campaign,
+          utm_term: body.utm_term,
+          utm_content: body.utm_content,
+          gclid: body.gclid,
+
+          landing_page: body.landing_page,
+          page_url: body.page_url,
+
+          form_type: body.form_type || "Website Registration",
+          lead_stage: "New Lead"
+        }),
+      });
+
+      const text = await webhookRes.text();
+      console.log("Webhook status:", webhookRes.status);
+      console.log("Webhook response:", text);
+    } catch (err) {
+      console.error("Webhook error (Student Google Lead):", err);
+    }
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -38,8 +71,6 @@ export async function POST(request) {
         pass: process.env.EMAIL_PASS,
       },
     })
-
-    //"inbound@pipelinevelocity.com","hello@dandesacademy.com", "chaitanya@dandesacademy.com", "swetha@dandesacademy.com"
 
     await transporter.sendMail({
       from: `"Dandes Academy" <${process.env.EMAIL_USER}>`,
@@ -76,16 +107,6 @@ export async function POST(request) {
               <tr>
                 <td style="padding:8px; font-weight:bold;">Qualification</td>
                 <td style="padding:8px;">${body.qualification}</td>
-              </tr>
-
-              <tr>
-                <td style="padding:8px; font-weight:bold;">Branch / Stream</td>
-                <td style="padding:8px;">${body.branch_or_stream}</td>
-              </tr>
-
-              <tr>
-                <td style="padding:8px; font-weight:bold;">Phone</td>
-                <td style="padding:8px;">${body.city}</td>
               </tr>
 
               <tr>
@@ -133,8 +154,6 @@ export async function POST(request) {
                 <td style="padding:8px;">${body.form_type || "-"}</td>
               </tr>
 
-              
-
               <tr>
                 <td style="padding:8px; font-weight:bold;">Created Time</td>
                 <td style="padding:8px;">
@@ -148,9 +167,6 @@ export async function POST(request) {
                   })}
                 </td>
               </tr>
-
-
-  
             </table>
 
             <hr style="margin:20px 0; border:none; border-top:1px solid #eee;" />
@@ -163,7 +179,6 @@ export async function POST(request) {
       `,
     })
 
-  
     await transporter.sendMail({
       from: '"Dandes Academy" <hello@dandesacademy.com>',
       to: body.email_id,
@@ -181,7 +196,6 @@ export async function POST(request) {
             <li>One of our Programe Counsellors will contact you shortly</li>
             <li>We'll understand your goals and answer your questions</li>
             <li>We'll share details about the curriculum, fees, and upcoming batches</li>
-            
           </ul>
 
           <p>We look forward to speaking with you.</p>

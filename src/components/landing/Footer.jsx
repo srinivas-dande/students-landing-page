@@ -113,54 +113,75 @@ export default function Footer() {
             </p>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-4">
-                <a href="#">
-                  <Image
-                    src="/icons/facebook.png"
-                    alt="Facebook"
-                    width={24}
-                    height={24}
-                  />
-                </a>
+            {/* Social Icons */}
+<div className="flex items-center gap-4">
+  <div className="flex items-center gap-4">
+    <a
+      href="https://www.facebook.com/DandesAcademy"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        src="/icons/facebook.png"
+        alt="Facebook"
+        width={24}
+        height={24}
+      />
+    </a>
 
-                <a href="#">
-                  <Image
-                    src="/icons/instagram.png"
-                    alt="Instagram"
-                    width={24}
-                    height={24}
-                  />
-                </a>
+    <a
+      href="https://www.instagram.com/dandesacademy?igsh=cjRkZWpmbWJubjFl"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        src="/icons/instagram.png"
+        alt="Instagram"
+        width={24}
+        height={24}
+      />
+    </a>
 
-                <a href="#">
-                  <Image
-                    src="/icons/twitter.png"
-                    alt="Twitter"
-                    width={24}
-                    height={24}
-                  />
-                </a>
+    <a
+      href="https://x.com/DandesAcademy"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        src="/icons/twitter.png"
+        alt="Twitter"
+        width={24}
+        height={24}
+      />
+    </a>
 
-                <a href="#">
-                  <Image
-                    src="/icons/linkedin.png"
-                    alt="LinkedIn"
-                    width={24}
-                    height={24}
-                  />
-                </a>
+    <a
+      href="https://www.linkedin.com/in/srinivasdande/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        src="/icons/linkedin.png"
+        alt="LinkedIn"
+        width={24}
+        height={24}
+      />
+    </a>
 
-                <a href="#">
-                  <Image
-                    src="/icons/youtube.png"
-                    alt="YouTube"
-                    width={24}
-                    height={24}
-                  />
-                </a>
-              </div>
-            </div>
+    <a
+      href="https://www.youtube.com/@DandesAcademy"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        src="/icons/youtube.png"
+        alt="YouTube"
+        width={24}
+        height={24}
+      />
+    </a>
+  </div>
+</div>
           </div>
         </div>
 
