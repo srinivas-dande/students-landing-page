@@ -74,15 +74,15 @@ export default function PlacementSupportSection() {
           </div>
 
           {/* Right Image — edge to edge, no padding, no rounded corners */}
-          <div className="order-1 lg:order-2 lg:w-1/2 mb-10 lg:mb-0">
-            <div className="w-full h-[400px] md:h-[500px] lg:h-full min-h-[600px]">
-              <img
-                src="/images/placement-support.jpg"
-                alt="Students working together on placement preparation"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-          </div>
+          <div className="order-1 lg:order-2 lg:w-1/2 flex justify-end mb-10 lg:mb-0">
+  <div className="w-[85%] h-[300px] md:w-[90%] md:h-[400px] lg:w-[600px] lg:h-[650px]">
+    <img
+      src="/images/placement-support.jpg"
+      alt="Students working together on placement preparation"
+      className="w-full h-full object-cover object-center"
+    />
+  </div>
+</div>
 
         </div>
       </div>

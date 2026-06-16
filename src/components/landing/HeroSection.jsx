@@ -200,14 +200,7 @@ export default function HeroSection() {
             Fill in your details and our team will contact you shortly to discuss the program, career opportunities, fee structure, and admission process.
           </p>
 
-          {/* Alert Box */}
-          <div className="bg-[#F5F1E6] border border-[#E9D2A8] rounded-md px-3 py-1 mb-6 flex items-center gap-3">
-            <span className="w-2.5 h-2.5 bg-[#F28C28] rounded-full"></span>
-            <span className="text-[#F28C28] text-[13px] font-semibold">
-              Batch-3 Filling Fast – Only 23 Seats Left
-
-            </span>
-          </div>
+          
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
