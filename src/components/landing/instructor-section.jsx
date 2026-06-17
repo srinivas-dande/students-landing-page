@@ -12,7 +12,7 @@ export function InstructorSection() {
     >
       {/* Full section background image */}
       <img
-        src="/images/instructor-bg.png"
+        src="/images/instructor-bg1.png"
         alt=""
         aria-hidden="true"
         style={{
