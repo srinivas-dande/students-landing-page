@@ -122,7 +122,7 @@ export default function FinalCTASection() {
 
           setErrors({});
           setSuccessMessage(
-            "Thank you! Our counsellor will contact you shortly."
+            "You have successfully registered!"
           );
 
           setTimeout(() => {

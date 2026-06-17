@@ -124,7 +124,7 @@ export default function HeroSection() {
 
         setErrors({});
         setSuccessMessage(
-          "Thank you!"
+          "You have successfully registered!"
         );
 
         setTimeout(() => {
