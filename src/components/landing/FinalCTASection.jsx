@@ -48,7 +48,7 @@ export default function FinalCTASection() {
   
         page_url: window.location.href,
         landing_page: window.location.pathname,
-        form_type: "Students Landing Page",
+        form_type: "STU - Landing Page",
       }));
     }, []);
 

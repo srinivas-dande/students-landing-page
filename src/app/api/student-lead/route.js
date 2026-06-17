@@ -52,8 +52,9 @@ export async function POST(request) {
           landing_page: body.landing_page,
           page_url: body.page_url,
 
-          form_type: body.form_type || "Website Registration",
-          lead_stage: "New Lead"
+          form_type: body.form_type || "STU - Landing Page",
+          lead_stage: "New Lead",
+          created_at: lead.created_at.toISOString(),
         }),
       });
 

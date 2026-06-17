@@ -4,7 +4,7 @@ export default function StatsBanner() {
   const stats = [
     { number: '25,000+',  label: 'STUDENTS TRAINED' },
     { number: '20+ YEARS',  label: 'EXPERIENCE' },
-    { number: '6',  label: 'AI/ML PROJECTS' },
+    { number: '6',  label: 'INDUSTRY PROJECTS' },
     { number: '3',  label: 'MOCK INTERVIEWS' },
   ];
 
