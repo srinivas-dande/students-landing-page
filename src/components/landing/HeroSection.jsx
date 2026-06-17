@@ -204,7 +204,7 @@ export default function HeroSection() {
           </p>
 
           {successMessage && (
-            <div className="bg-green-50 border border-green-200 text-green-700 rounded-lg p-3 text-sm">
+            <div className="bg-green-50 border border-green-200 text-green-700 rounded-lg p-3 text-sm mb-6">
               {successMessage}
             </div>
           )}
