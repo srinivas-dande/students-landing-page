@@ -180,9 +180,12 @@ export default function FinalCTASection() {
                 Fill in your details and our team will contact you shortly to discuss the program, career opportunities, fee structure, and admission process.
               </p>
 
-              
+              {successMessage && (
+                <div className="bg-green-50 border border-green-200 text-green-700 rounded-lg p-3 text-sm">
+                  {successMessage}
+                </div>
+              )}
 
-              {/* Form */}
               {/* Form */}
               <form onSubmit={handleSubmit} className="space-y-5">
               {/* Full Name */}
@@ -337,11 +340,7 @@ export default function FinalCTASection() {
                 
               </div>
 
-              {successMessage && (
-                <div className="bg-green-50 border border-green-200 text-green-700 rounded-lg p-3 text-sm">
-                  {successMessage}
-                </div>
-              )}
+              
 
               {/* Submit Button */}
               <button
