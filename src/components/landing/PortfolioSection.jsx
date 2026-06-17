@@ -54,7 +54,7 @@ export default function PortfolioSection() {
       companies: [],
       isCapstone: true,
       
-      footerText: 'This is the project that helps you connect your past experience with future AI/ML roles.'
+      footerText: 'This is the project that helps you stand out to recruiters and unlock more AI/ML career opportunities.'
     }
   ];
 
@@ -121,7 +121,7 @@ export default function PortfolioSection() {
               {/* Companies */}
               {project.companies.length > 0 && (
                 <p className="text-xs text-[#9CA3AF]">
-                  Used by teams at:{' '}
+                  Inspired by real-world Use Cases from:{' '}
                   <span className="text-[#4F46E5] font-medium">
                     {project.companies.join(', ')}
                   </span>
