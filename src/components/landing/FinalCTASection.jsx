@@ -122,12 +122,16 @@ export default function FinalCTASection() {
 
           setErrors({});
           setSuccessMessage(
-            "You have successfully registered!"
+            <>
+            Thank you! We have received your details.
+              <br />
+            Our team will contact you shortly.
+          </>
           );
 
           setTimeout(() => {
             setSuccessMessage("");
-          }, 5000);
+          }, 15000);
         }
 
         setLoading(false);
