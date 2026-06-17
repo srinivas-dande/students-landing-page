@@ -12,7 +12,6 @@ import SelfCheckSection from '@/components/landing/SelfCheckSection';
 import FAQSection from '@/components/landing/FAQSection';
 import { InstructorSection } from "@/components/landing/instructor-section";
 import FinalCTASection from '@/components/landing/FinalCTASection';
-import Footer from '@/components/landing/Footer';
 
 
 export default function Page() {
@@ -32,7 +31,7 @@ export default function Page() {
       <FAQSection />
       <InstructorSection />
       <FinalCTASection />
-      <Footer />
+      
     </main>
   );
 }
