@@ -75,7 +75,7 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: `"Dandes Academy" <${process.env.EMAIL_USER}>`,
-      to: ["chaitanya@dandesacademy.com"],
+      to: ["inbound@pipelinevelocity.com","hello@dandesacademy.com", "chaitanya@dandesacademy.com", "swetha@dandesacademy.com"],
       subject: `New Google Lead - ${body.full_name} - AI & Machine Learning Program`,
       html: `
         <div style="font-family: Arial, sans-serif; background:#f5f7fa; padding:30px;">
