@@ -1,5 +1,6 @@
 import './globals.css';
 import Script from "next/script";
+import { Inter } from "next/font/google";
 
 export const metadata = {
   title: 'AI & Machine Learning Career Program for Students | Dandes Academy',
@@ -24,6 +25,10 @@ export const metadata = {
     'AI career program 2026',
   ],
 };
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 
 
