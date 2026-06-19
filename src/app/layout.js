@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        <main className="pt-[90px] min-h-screen">
+        <main className="min-h-screen">
           {children}
         </main>
 
