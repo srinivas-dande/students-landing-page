@@ -15,6 +15,10 @@ export async function POST(request) {
         year_of_passout: body.year_of_passout,
         qualification: body.qualification,
 
+        lead_status: body.lead_status,
+        lead_source: body.lead_source,
+        lead_sub_source: body.lead_sub_source,
+
         utm_source: body.utm_source,
         utm_medium: body.utm_medium,
         utm_campaign: body.utm_campaign,
@@ -41,6 +45,10 @@ export async function POST(request) {
           phone: body.whatsapp_number,
           year_of_passout: body.year_of_passout,
           qualification: body.qualification,
+          
+          lead_source: body.lead_source,
+          lead_sub_source: body.lead_sub_source,
+          lead_status: body.lead_status,
 
           utm_source: body.utm_source,
           utm_medium: body.utm_medium,
@@ -49,6 +57,9 @@ export async function POST(request) {
           utm_content: body.utm_content,
           gclid: body.gclid,
 
+          lead_source: body.lead_source,
+          lead_sub_source: body.lead_sub_source,
+ 
           landing_page: body.landing_page,
           page_url: body.page_url,
 

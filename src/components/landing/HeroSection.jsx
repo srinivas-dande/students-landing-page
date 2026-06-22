@@ -50,6 +50,10 @@ export default function HeroSection() {
       page_url: window.location.href,
       landing_page: window.location.pathname,
       form_type: "STU - Landing Page",
+
+      lead_status: "New Lead",
+      lead_source: "Google Leads",
+      lead_sub_source: "STU - Landing Page"
     }));
   }, []);
 

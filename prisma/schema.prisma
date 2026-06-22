@@ -14,7 +14,10 @@ model StudentGoogleLead {
   whatsapp_number   String
   year_of_passout   String
   qualification     String
-  
+
+  lead_status       String?   @default("New Lead")
+  lead_source       String?
+  lead_sub_source   String?  
 
   utm_source        String?
   utm_medium        String?
@@ -40,6 +43,10 @@ model ProfessionalsGoogleLead {
   whatsapp_number    String
   year_of_experience String
   current_role       String
+
+  lead_status       String?   @default("New Lead")
+  lead_source       String?
+  lead_sub_source   String?
 
   utm_source         String?
   utm_medium         String?
