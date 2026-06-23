@@ -1,5 +1,30 @@
 "use client";
 import { useState, useEffect } from "react";
+import { isValidPhoneNumber } from "libphonenumber-js";
+
+
+const countries = [
+  { code: "IN", dial: "+91" },
+  { code: "US", dial: "+1" },
+  { code: "CA", dial: "+1" },
+  { code: "GB", dial: "+44" },
+  { code: "AU", dial: "+61" },
+  { code: "AE", dial: "+971" },
+  { code: "SG", dial: "+65" },
+  { code: "DE", dial: "+49" },
+  { code: "FR", dial: "+33" },
+  { code: "NL", dial: "+31" },
+  { code: "IE", dial: "+353" },
+  { code: "NZ", dial: "+64" },
+  { code: "SA", dial: "+966" },
+  { code: "QA", dial: "+974" },
+  { code: "KW", dial: "+965" },
+  { code: "OM", dial: "+968" },
+  { code: "BH", dial: "+973" },
+  { code: "ZA", dial: "+27" },
+  { code: "MY", dial: "+60" },
+  { code: "JP", dial: "+81" },
+];
 
 export default function HeroSection() {
 
@@ -34,6 +59,8 @@ export default function HeroSection() {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const [countryCode, setCountryCode] = useState("+91");
+  const [phoneError, setPhoneError] = useState("");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -74,8 +101,12 @@ export default function HeroSection() {
 
     if (!formData.whatsapp_number.trim()) {
       newErrors.whatsapp_number = "WhatsApp number is required";
-    } else if (!/^\d{10}$/.test(formData.whatsapp_number)) {
-      newErrors.whatsapp_number = "Enter a valid 10 digit number";
+    } else {
+      const fullPhone = `${countryCode}${formData.whatsapp_number}`;
+
+      if (!isValidPhoneNumber(fullPhone)) {
+        newErrors.whatsapp_number = "Enter a valid phone number";
+      }
     }
 
     if (!formData.year_of_passout) {
@@ -102,6 +133,11 @@ export default function HeroSection() {
       return;
     }
 
+    const payload = {
+      ...formData,
+      whatsapp_number: `${countryCode}${formData.whatsapp_number}`,
+    };
+
     try {
       setLoading(true);
       const response = await fetch("/api/student-lead", {
@@ -109,7 +145,7 @@ export default function HeroSection() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
@@ -233,7 +269,7 @@ export default function HeroSection() {
                     full_name: e.target.value,
                   })
                 }
-                placeholder="Aditya Rao"
+                placeholder="Srinivas Dande"
                 className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
               />
               {errors.full_name && (
@@ -244,7 +280,7 @@ export default function HeroSection() {
             </div>
 
             {/* WhatsApp and Email Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-4">
               <div>
                 <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
                   Email ID
@@ -269,26 +305,48 @@ export default function HeroSection() {
               </div>
 
               <div>
-                <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                  WhatsApp Number
-                </label>
-                <input
-                  type="tel"
-                  value={formData.whatsapp_number}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      whatsapp_number: e.target.value,
-                    })
-                  }
-                  placeholder="+91 98765 43210"
-                  className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
-                />
-                {errors.whatsapp_number && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.whatsapp_number}
-                  </p>
-                )}
+                
+                <div>
+  <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
+    WhatsApp Number
+  </label>
+
+  <div className="flex gap-2 w-full">
+    <select
+      value={countryCode}
+      onChange={(e) => setCountryCode(e.target.value)}
+      className="w-[110px] shrink-0 border border-[#D0D5DD] rounded-lg px-2 py-3 bg-white text-[#1a1a1a]"
+    >
+      {countries.map((country) => (
+        <option key={country.code} value={country.dial}>
+          {country.code} {country.dial}
+        </option>
+      ))}
+    </select>
+
+    <input
+      type="tel"
+      value={formData.whatsapp_number}
+      onChange={(e) => {
+        setPhoneError("");
+
+        setFormData({
+          ...formData,
+          whatsapp_number: e.target.value.replace(/\D/g, ""),
+        });
+      }}
+      placeholder="Phone Number"
+      className="min-w-0 flex-1 px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
+    />
+  </div>
+
+  {(errors.whatsapp_number || phoneError) && (
+    <p className="text-red-500 text-xs mt-1">
+      {errors.whatsapp_number || phoneError}
+    </p>
+  )}
+</div>
+                
               </div>
             </div>
 
