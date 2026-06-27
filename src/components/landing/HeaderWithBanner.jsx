@@ -18,7 +18,7 @@ export default function HeaderWithBanner() {
           />
           <p className="text-white text-sm md:text-lg">
             Next cohort starts{' '}
-            <span className="italic">June 25th, 2026</span>
+            <span className="italic">July 2nd, 2026</span>
             , Only{' '}
             <span className="italic">23 seats</span>
             {' '}remaining. Don&apos;t lose your spot.
