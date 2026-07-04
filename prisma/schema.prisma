@@ -7,6 +7,30 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model DaDemoLead {
+  lead_id            Int      @id @default(autoincrement())
+  full_name          String
+  email              String
+  phone              String
+  candidate_type     String?
+  current_job_role   String?
+  experience_range   String?
+  qualification      String?
+  year_of_passout    String?
+  career_goal        String?
+  preferred_batch    String?
+  city               String?
+  lead_source        String?
+  lead_sub_source    String?
+  page_url           String?
+  course_interested  String?
+  ip_address         String?
+  lead_status        String   @default("New")
+  created_at         DateTime @default(now())
+
+  @@map("da_demo_leads")
+}
+
 model StudentGoogleLead {
   lead_id           Int      @id @default(autoincrement())
   full_name         String
