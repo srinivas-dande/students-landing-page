@@ -31,6 +31,30 @@ model DaDemoLead {
   @@map("da_demo_leads")
 }
 
+model DaContactMessage {
+  message_id     Int      @id @default(autoincrement())
+  full_name      String
+  email          String
+  phone          String?
+  inquiry_type   String?
+  message        String
+  consent_given  Boolean  @default(false)
+  status         String   @default("New")
+  created_at     DateTime @default(now())
+
+  @@map("da_contact_messages")
+}
+
+model DaEmailSubscription {
+  subscription_id   Int       @id @default(autoincrement())
+  email             String    @unique
+  status            String    @default("Subscribed")
+  subscribed_at     DateTime  @default(now())
+  unsubscribed_at   DateTime?
+
+  @@map("da_email_subscriptions")
+}
+
 model StudentGoogleLead {
   lead_id           Int      @id @default(autoincrement())
   full_name         String
