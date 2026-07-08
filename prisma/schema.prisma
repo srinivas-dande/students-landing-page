@@ -55,6 +55,26 @@ model DaEmailSubscription {
   @@map("da_email_subscriptions")
 }
 
+model DaTestimonials {
+  testimonial_id     Int      @id @default(autoincrement())
+  batch              String?
+  full_name          String
+  email              String
+  phone_number       String
+  current_job_role   String?
+  current_company    String?
+  company_location   String?
+  career_goal        String?
+  linkedin_profile   String?
+  testimonial        String
+  photo_url          String?
+  video_testimonial  Boolean   @default(false)
+  consent            Boolean   @default(false)
+  submitted_at       DateTime  @default(now())
+
+  @@map("da_testimonials")
+}
+
 model StudentGoogleLead {
   lead_id           Int      @id @default(autoincrement())
   full_name         String

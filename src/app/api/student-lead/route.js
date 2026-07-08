@@ -191,36 +191,6 @@ export async function POST(request) {
       `,
     })
 
-    await transporter.sendMail({
-      from: '"Dandes Academy" <hello@dandesacademy.com>',
-      to: body.email_id,
-      subject: "Thank You for Your Interest in Our AI & Machine Learning Program | Dandes Academy",
-      html: `
-        <div style="font-family: Arial, sans-serif; font-size:15px; line-height: 1.6; color: #333;">
-          <h2 style="color:#111;">Hello ${body.full_name || "there"},</h2>
-
-          <p>Thank you for your interest in our <b>AI & Machine Learning Program:</b></p>
-          <p>We're glad you reached out.</p>
-
-          <p><strong>Here's what happens next:</strong></p>
-
-          <ul style="padding-left: 20px;">
-            <li>One of our Programe Counsellors will contact you shortly</li>
-            <li>We'll understand your goals and answer your questions</li>
-            <li>We'll share details about the curriculum, fees, and upcoming batches</li>
-          </ul>
-
-          <p>We look forward to speaking with you.</p>
-
-          <p>
-            Regards,<br/>
-            <strong>Srinivas Dande</strong><br/>
-            Founder & Lead Trainer<br/>
-            Dandes Academy
-          </p>
-        </div>
-      `,
-    });
 
     return NextResponse.json({
       success: true,
