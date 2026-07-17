@@ -12,14 +12,6 @@ model DaDemoLead {
   full_name          String
   email              String
   phone              String
-  candidate_type     String?
-  current_job_role   String?
-  experience_range   String?
-  qualification      String?
-  year_of_passout    String?
-  career_goal        String?
-  preferred_batch    String?
-  city               String?
   lead_source        String?
   lead_sub_source    String?
   page_url           String?
@@ -140,4 +132,15 @@ model EmailSubscription {
   createdAt DateTime @default(now()) @map("createdat")
 
   @@map("email_subscription")
+}
+
+model DaWebinars {
+  webinarId   Int       @id(map: "dawebinars_pkey") @default(autoincrement())
+  title       String    @db.VarChar(255)
+  dateTime    DateTime  @db.Timestamp(6)
+  description String?
+  createdAt   DateTime? @default(now()) @db.Timestamp(6)
+  status      String?   @default("Running") @db.VarChar(50)
+
+  @@map("DaWebinars")
 }
