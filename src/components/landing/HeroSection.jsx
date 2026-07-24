@@ -79,7 +79,7 @@ export default function HeroSection() {
       form_type: "STU - Landing Page",
 
       lead_status: "New Lead",
-      lead_source: "Google Leads",
+      lead_source: "Google Ads",
       lead_sub_source: "STU - Landing Page"
     }));
   }, []);
