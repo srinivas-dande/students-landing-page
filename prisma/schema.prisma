@@ -144,3 +144,13 @@ model DaDemoTimer {
 
   @@map("da_demo_timers")
 }
+
+model DbBlogViews {
+  blogId      Int      @id @default(autoincrement())
+  blogTitle   String   @unique @db.VarChar(255)
+  count       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("db_blog_views")
+}
